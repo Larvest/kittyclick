@@ -15,14 +15,18 @@ var clicker = {
         }
     }
 };
-function food_clicked(ass){ // я хз как это работает, но каждый клик дает 1 еду
+function food_clicked(ass){
+     if(clicker.upgrades[ass].cost <= clicker.food){
+    clicker.food-= clicker.upgrades[ass].cost;
     clicker.upgrades[ass].amount++;
+    clicker.upgrades[thing].cost += Math.round(clicker.upgrades[ass].cost*0.15); // ну это как бы ебать ваще я не ебу че делает, но это короче формула увеличивающая цену с каждой покупкой
     update_upgrades();
+    }
 }
 function update_upgrades(){
     document.querySelector("#upgrades").innerHTML="";
     for(i in clicker.upgrades){
-        document.querySelector("#upgrades").innerHTML+= `<br><button onclick="food_clicked('${i}')">${clicker.upgrades[i].name}<button> у вас ${clicker.upgrades[i].amount}` //втф че это блять
+        document.querySelector("#upgrades").innerHTML+= `<br><button onclick="food_clicked('${i}')">${clicker.upgrades[i].name}</button> у вас <b>${clicker.upgrades[i].amount}</b>. Цена: ${clicker.upgrades[i].cost}` //втф че это блять 
     }
 }
 function updatecount(){ // не трогать желательно
