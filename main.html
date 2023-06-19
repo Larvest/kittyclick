@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <link rel="stylesheet" href="prikoli.css">
+<link rel="icon" href="img/icon.jpg">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kitty Clicker</title>
-    <script src="cliker.js">
-    </script>
+    <script src="cliker.js"></script>
 </head>
 <body onload="updatecount()">
     <h1 id="food">у вас 0 корма</h1>
-    <button class="foodButton" onclick="food_clicked('food')">Получить корм</button>
-    <button class="imageButton">Купить кота японца</button>
+    <button class="foodButton" onclick="clicker.food++">Получить корм</button>
+    <button class="imageButton">Купить кота японца</button> <!--НЕ РАБОТАЕТ-->
+    <div id="upgrades">
+
+    </div>
 </body>
 </html>
