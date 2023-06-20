@@ -53,4 +53,3 @@ function updatecount(){ // не трогать желательно
     }
     }, 50);
 }
-var income = `<h2>"Ваш доход: "${clicker.upgrades[i].japanese_cat*clicker.fps} }</h2>`
