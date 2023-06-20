@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="prikoli.css">
-<link rel="icon" href="img/icon.jpg">
 <link rel="stylesheet" href="style.css">
+<link rel="icon" href="img/icon.jpg">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kitty Clicker</title>
-    <script src = "https://cdn.jsdelivr.net/npm/js-cookie@beta/dist/js.cookie.min.js"></script> <!--сохранения-->
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@beta/dist/js.cookie.min.js"></script> <!--сохранения-->
     <script src="cliker.js"></script>
 </head>
 <body onload="updatecount()">
     <h1 class="center" id="food">у вас 0 корма</h1>
     <button class="foodButton" onclick="clicker.food++">Получить корм</button>
     <div id="income">
-
+        <h1 class="center" id="foodPerSecond">у вас 0 корма в секунду</h1>
     </div>
     <div id="upgrades">
 
